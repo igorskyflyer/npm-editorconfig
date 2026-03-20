@@ -6,7 +6,7 @@
 <blockquote align="center">EditorConfig • Instant Copy • Overwrite Prompt • Zero Dependencies</blockquote>
 
 <h4 align="center">
-  ✍🏼 Opinionated EditorConfig for consistent code style across editors and IDEs. 🐭
+  ✍🏼 A CLI tool for adding an opinionated EditorConfig to any project. 🐭
 </h4>
 
 <br>
