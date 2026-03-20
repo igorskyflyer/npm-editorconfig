@@ -1,7 +1,7 @@
 {
     "name": "@igorskyflyer/editorconfig",
     "version": "1.0.0",
-    "description": "✍🏼 Opinionated EditorConfig for consistent code style across editors and IDEs. 🐭",
+    "description": "✍🏼 A CLI tool for adding an opinionated EditorConfig to any project. 🐭",
     "sideEffects": false,
     "engines": {
         "node": ">=24.0"
