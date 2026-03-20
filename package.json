@@ -1,18 +1,18 @@
 {
-    "name": "@igorskyflyer/{{pkg}}",
-    "version": "{{version}}",
-    "description": "{{desc}}",
+    "name": "@igorskyflyer/editorconfig",
+    "version": "1.0.0",
+    "description": "✍🏼 Opinionated EditorConfig for consistent code style across editors and IDEs. 🐭",
     "sideEffects": false,
     "engines": {
         "node": ">=24.0"
     },
     "type": "module",
-    "types": "./dist/index.d.ts",
-    "main": "./dist/index.js",
-    "module": "./dist/index.js",
+    "bin": {
+        "editorconfig": "./bin/index.js"
+    },
     "files": [
-        "dist/**/*.js",
-        "dist/**/*.d.ts"
+        ".editorconfig",
+        "bin/**/*.js"
     ],
     "scripts": {
         "build": "tsc",
@@ -20,20 +20,28 @@
         "pub": "pnpm test && git push origin main --tags"
     },
     "keywords": [
-        "{{tags}}",
+        "editorconfig",
+        "editor",
+        "tabs",
+        "spaces",
+        "format",
+        "formatting",
+        "code",
+        "spacing",
+        "dx",
         "igor dimitrijević",
         "igorskyflyer"
     ],
     "license": "MIT",
     "author": "Igor Dimitrijević <support@igorskyflyer.me> (https://github.com/igorskyflyer)",
     "funding": "https://ko-fi.com/igorskyflyer",
-    "homepage": "https://github.com/igorskyflyer/{{repo}}",
+    "homepage": "https://github.com/igorskyflyer/npm-editorconfig",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/igorskyflyer/{{repo}}.git"
+        "url": "git+https://github.com/igorskyflyer/npm-editorconfig.git"
     },
     "bugs": {
-        "url": "https://github.com/igorskyflyer/{{repo}}/issues"
+        "url": "https://github.com/igorskyflyer/npm-editorconfig/issues"
     },
     "devDependencies": {
         "@biomejs/biome": "^2.4.8",
