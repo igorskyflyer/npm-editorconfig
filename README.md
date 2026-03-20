@@ -1,12 +1,12 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/igorskyflyer/{{repo}}/main/media/{{pkg}}.png" alt="Icon of {{project}}" width="256" height="256">
-  <h1>{{project}}</h1>
+  <img src="https://raw.githubusercontent.com/igorskyflyer/npm-editorconfig/main/media/editorconfig.png" alt="Icon of EditorConfig" width="256" height="256">
+  <h1>EditorConfig</h1>
 </div>
 
-<blockquote align="center"> •  •  • </blockquote>
+<blockquote align="center">EditorConfig • Instant Copy • Overwrite Prompt • Zero Dependencies</blockquote>
 
 <h4 align="center">
-  {{desc}}
+  ✍🏼 Opinionated EditorConfig for consistent code style across editors and IDEs. 🐭
 </h4>
 
 <br>
@@ -15,8 +15,6 @@
 
 - ✨ [**Features**](#features)
 - 🕵🏼 [**Usage**](#usage)
-- 🤹🏼 [**API**](#api)
-- 🗒️ [**Examples**](#examples)
 - ⚙️ [**Implementation**](#implementation)
 - 🎯 [**Motivation**](#motivation)
 - 📝 [**Changelog**](#changelog)
@@ -29,55 +27,83 @@
 
 ## Features
 
-- 
-- 
-- 
+- 🎨 Copies `.editorconfig` into the current project instantly
+- ⚠️ Detects existing `.editorconfig` and prompts before overwriting
+- ⏭️ Skips safely on declined overwrite - no `destructive` changes
+- ✅ Clear success and error `feedback` for every outcome
+- 🛡️ Zero dependencies - pure `Node.js` built-ins only
 
 <br>
 
 ## Usage
 
-Install it by executing any of the following, depending on your preferred package manager:
-
+Run it directly without installing:
 ```bash
-pnpm add @igorskyflyer/{{pkg}}
+npx @igorskyflyer/editorconfig
 ```
 
+Or install globally:
 ```bash
-yarn add @igorskyflyer/{{pkg}}
+pnpm add -g @igorskyflyer/editorconfig
+npm i -g @igorskyflyer/editorconfig
+yarn global add @igorskyflyer/editorconfig
 ```
 
+Then run:
 ```bash
-npm i @igorskyflyer/{{pkg}}
+editorconfig
 ```
 
 <br>
 
-## API
+Adding `.editorconfig` to a fresh project:
+```
+✅ .editorconfig added to the project!
+```
 
-<br>
+Running in a project that already has `.editorconfig`:
+```
+⚠️ .editorconfig already exists. Overwrite? (y/N)  
+```
 
-## Examples
+Accepting the overwrite:
+```
+✅ .editorconfig updated successfully!
+```
+
+Declining the overwrite:
+```
+⏭️  Skipped.
+```
 
 <br>
 
 ## Implementation
 
+The CLI resolves two paths at runtime:
+
+- **source** - the `.editorconfig` bundled inside the package
+- **destination** - the current working directory (`process.cwd()`)
+
+If no `.editorconfig` exists at the destination, it is copied instantly. If one already exists, an overwrite prompt is shown before any changes are made. All errors are caught and displayed with a non-zero exit code, ensuring shell scripts and CI pipelines can detect failures.
+
 <br>
 
 ## Motivation
+
+Manually copying `.editorconfig` across projects is repetitive and error-prone. A shared, versioned config ensures every project stays consistent - one update propagates everywhere, just like all packages of the `@igorskyflyer` ecosystem do!
 
 <br>
 
 ## Changelog
 
-Read about the latest changes in the [**CHANGELOG**](https://github.com/igorskyflyer/{{repo}}/blob/main/CHANGELOG.md).
+Read about the latest changes in the [**CHANGELOG**](https://github.com/igorskyflyer/npm-editorconfig/blob/main/CHANGELOG.md).
 
 <br>
 
 ## License
 
-Licensed under the [**MIT license**](https://github.com/igorskyflyer/{{repo}}/blob/main/LICENSE).
+Licensed under the [**MIT license**](https://github.com/igorskyflyer/npm-editorconfig/blob/main/LICENSE).
 
 <br>
 
@@ -99,25 +125,33 @@ Licensed under the [**MIT license**](https://github.com/igorskyflyer/{{repo}}/bl
 
 ## Related
 
-[**ID**]()
+[**@igorskyflyer/valid-path**](https://www.npmjs.com/package/@igorskyflyer/valid-path)
 
-> _ID_
+> _🧰 Determines whether a given value can be a valid file/directory name. 🏜_
 
-[**ID**]()
+<br>
 
-> _ID_
+[**@igorskyflyer/windows-packages**](https://www.npmjs.com/package/@igorskyflyer/windows-packages)
 
-[**ID**]()
+> _💻 A package for reading the Packages registry key on Windows 10+. Useful for retrieving Windows 10+ installed Store applications. 📦_
 
-> _ID_
+<br>
 
-[**ID**]()
+[**@igorskyflyer/astro-render-component**](https://www.npmjs.com/package/@igorskyflyer/astro-render-component)
 
-> _ID_
+> _🤖 Astro component renderer. Zero configuration. Produces clean HTML strings directly in Node.js without any DOM environment. 🐬_
 
-[**ID**]()
+<br>
 
-> _ID_
+[**@igorskyflyer/my-file-path**](https://www.npmjs.com/package/@igorskyflyer/my-file-path)
+
+> _🌟 A package that strongly types file paths! 🥊_
+
+<br>
+
+[**@igorskyflyer/common-types**](https://www.npmjs.com/package/@igorskyflyer/common-types)
+
+> _🔦 Provides frequently used types for your TypeScript projects. 🦄_
 
 <br>
 
