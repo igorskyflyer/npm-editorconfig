@@ -1,9 +1,9 @@
 # 📒 Changelog
 
-### of [**@igorskyflyer/{{pkg}}**](https://github.com/igorskyflyer/{{repo}})
+### of [**@igorskyflyer/editorconfig**](https://github.com/igorskyflyer/npm-editorconfig)
 
 <br>
 
-## v1.0.0 – *2026-MM-DD*
+## v1.0.0 – *2026-03-20*
 
 - 🚀 **launch**: initial release 🎉
